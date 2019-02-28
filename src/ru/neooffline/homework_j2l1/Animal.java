@@ -11,6 +11,7 @@ public class Animal implements IRun {
         this.onDistance = onDistance;
         return this;
     }
+    public Animal(){}
 
     public Animal(String name, int canRunDistance){
         this.name = name;

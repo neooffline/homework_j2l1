@@ -5,14 +5,12 @@ public class Main {
     public static void main(String[] args) {
 
     Team team = new Team();
-    Course course = new Course(2);
+    Course course = new Course();
     for (Obstacle ob:course.getCourse()){
         for (Animal an:team.getTeam()) {
             ob.doIt(an);
         }
     }
-        for (Animal an:team.getTeam()) {
-            System.out.println(an.getName() + " on distance " + an.isOnDistance());
-        }
+        team.showResults();
     }
 }

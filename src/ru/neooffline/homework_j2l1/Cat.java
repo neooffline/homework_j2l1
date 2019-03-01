@@ -11,5 +11,10 @@ public class Cat extends Animal implements IJump {
         if(this.jumpHeight < height){
             setOnDistance(false);
         }
+        this.status = info() + "ןנûזמך םא " + jumpHeight + "ל.; ";
+    }
+    @Override
+    public String info() {
+        return isOnDistance()?" ןנמרוכ ":" םו ןנמרוכ ";
     }
 }

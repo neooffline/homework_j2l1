@@ -12,5 +12,10 @@ public class Duck extends Animal implements ISwimable {
         if (this.canSwimDistance<distance){
             setOnDistance(false);
         }
+        this.status = info() + "заплыв на " + distance +"м.;";
+    }
+    @Override
+    public String info() {
+        return isOnDistance()?" прошел ":" не прошел ";
     }
 }

@@ -1,20 +1,19 @@
 package ru.neooffline.homework_j2l1;
 
-public class Course extends Obstacle {
+import java.util.Random;
+
+public class Course {
     private Obstacle[] course;
-    Course(int size) {
-        super(size);
+    Random random = new Random();
+    Course() {
         course = new Obstacle[]{
-            new Road(100),
-            new Wall(1),
-            new Water(100)
+            new Road(random.nextInt(300)),
+            new Wall(random.nextInt(4)),
+            new Water(random.nextInt(200))
         };
     }
     public Obstacle[] getCourse(){
         return this.course;
     }
-    @Override
-    public void doIt(Animal a) {
 
-    }
 }

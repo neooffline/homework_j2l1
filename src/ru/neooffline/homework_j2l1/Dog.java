@@ -4,7 +4,7 @@ public class Dog extends Animal implements ISwimable,IJump,IRun {
     private final int canSwimDistance;
     private final int jumpHeight;
     protected Dog(int canSwimDistance, int runDistance, int jumpHeight){
-        super("Dog",runDistance);
+        super("dog",runDistance);
         this.canSwimDistance = canSwimDistance;
         this.jumpHeight = jumpHeight;
     }
@@ -14,6 +14,7 @@ public class Dog extends Animal implements ISwimable,IJump,IRun {
         if (this.jumpHeight < height){
             setOnDistance(false);
         }
+        status = info() + "прыжок на " + height + "м.;";
     }
 
     @Override
@@ -21,6 +22,7 @@ public class Dog extends Animal implements ISwimable,IJump,IRun {
         if(this.canSwimDistance < distance){
             setOnDistance(false);
         }
+        this.status = info() + "заплыв на " + distance + "м.;";
     }
     @Override
     public void run(int dist){
